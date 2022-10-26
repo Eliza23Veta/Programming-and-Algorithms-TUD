@@ -1,0 +1,40 @@
+# The Problem
+
+# We are going to do some conversions, from integer to binary and then from binary back to integer. It will give us a
+# chance to play with if-elif-else and while statements, as well as a little string slicing.
+
+# Your Task
+# You prompt for an integer, convert the integer to a binary number string (there is no type for actual binary numbers
+# so we just represent it as a string). We then take the string and turn it back into a regular integer. Things to remember
+# If the integer is 0, then we are done since conversion back and forth of 0 is still 0. The program simply prints a note
+# saying it is 0 and quits.
+
+incoming_int_as_string = input("Enter an integer to convert: ")
+if incoming_int_as_string.isnumeric():
+    incoming_int = int(incoming_int_as_string)
+else:
+    print(f"{incoming_int_as_string} is not a number, quitting...")
+    quit(1)
+
+# If the integer is negative, then we probably don’t know how to do it, so the program prints a message saying it is
+# negative and quits.
+
+if incoming_int < 0:
+    print(f"Value {incoming_int} cannot be processed, so I'm quitting...")
+    quit(1)
+else:
+    print(f"{incoming_int} is a valid number, proceeding to conversion...")
+
+# Otherwise, we do the conversion of the integer to a binary string (a string of 1’s and 0’s) and then convert that same
+# string back to an integer to make sure we did it right.
+
+# Hints
+
+binary_string = ''
+
+while incoming_int > 0:
+                                           # keep dividing by 2 until nothing left
+    remainder = incoming_int % 2           # '%' is 'modulus' i.e. it calculates the remainder from division
+    incoming_int = incoming_int // 2       # '//' is 'integer' division, i.e. yields a whole number only.
+    binary_string = str(remainder)         # Fill in what has to happen next (make a string of remainder and add it to
+    print(binary_string)                   # the front of 'binary_string')
