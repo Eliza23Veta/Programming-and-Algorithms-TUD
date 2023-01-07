@@ -17,4 +17,4 @@ POLMORPHISM: the principle that one kind of thing can take a variety of forms. I
 language can behave in multiple ways depending on the context.
 Operator polymorphism, or operator overloading, means that one symbol can be used to perform multiple operations. One of the simplest examples of this is the addition
 operator +. Python’s addition operator works differently in relation to different data types.
-Function polymorphism for Len() function. If applied to a string
+Function polymorphism for Len() function. If applied to a string, it will count the number of characters inside the string. If applied to a list, it will return a number of elements inside that list. 
