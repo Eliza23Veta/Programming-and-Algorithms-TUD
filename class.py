@@ -20,3 +20,5 @@ print(chocoland.IsYummy())
 print(berry)
 print(berry.IsYummy())
 
+dir(IceCream) 
+
